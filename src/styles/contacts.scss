@@ -1,0 +1,33 @@
+.contacts {
+
+  &__container {
+    padding: 80px 0;
+  }
+
+  &__form {
+    margin-top: 40px;
+  }
+
+  &__button {
+    display: block;
+    margin-top: 16px;
+    padding: 10px 20px;
+    border: 2px solid $color-blue;
+    border-radius: 8px;
+    background-color: $color-blue;
+    box-shadow: 0 6px 15px rgba(0, 117, 255, 0.46);
+
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 100%;
+    color: $color-white;
+
+    cursor: pointer;
+
+    @include hoverButton
+      (
+        box-shadow, 0 13px 15px rgba(59, 69, 82, 0.46),
+        background-color, $color-blue-hover
+      );
+  }
+}

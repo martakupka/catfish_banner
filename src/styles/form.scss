@@ -1,0 +1,33 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 720px;
+
+  @media (max-width: 960px) {
+    width: 320px;
+    margin-top: 30px;
+  }
+
+  &__item {
+    height: 48px;
+    margin-bottom: 16px;
+    padding: 0 17px;
+    font-size: 16px;
+    line-height: 100%;
+    background-color: $color-gray-form;
+    border: 1px solid $color-white;
+    border-radius: 8px;
+
+    &--textarea {
+      height: 144px;
+      padding: 17px;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      line-height: 100%;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2pt $color-blue;
+    }
+  }
+}

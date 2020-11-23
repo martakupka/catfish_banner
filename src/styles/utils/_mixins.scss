@@ -4,3 +4,15 @@
     #{$_property}: $_toValue;
   }
 }
+
+@mixin hoverButton
+  (
+    $_propertyFirst, $_toValueFirst,
+    $_propertySecond, $_toValueSecond
+  ) {
+  transition: #{$_propertyFirst} 0.8s, #{$_propertySecond} 0.8s;
+  &:hover {
+    #{$_propertyFirst}: $_toValueFirst;
+    #{$_propertySecond}: $_toValueSecond;
+  }
+}

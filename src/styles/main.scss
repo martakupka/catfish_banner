@@ -1,7 +1,36 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "header";
+@import "heading";
+@import "about";
+@import "person";
+@import "testimonials";
+@import "contacts";
+@import "form";
+@import "footer";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: $c-gray;
+  font-family: "Roboto", sans-serif;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  background-color: $color-white;
+}
+
+.container {
+  max-width: 1024px;
 }
