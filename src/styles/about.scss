@@ -20,6 +20,8 @@
 
   &__link {
     color: $color-blue;
+
+    @include hover(color, $color-blue-hover);
   }
 
   &__text {

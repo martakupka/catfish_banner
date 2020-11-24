@@ -23,6 +23,8 @@
     &:visited {
       color: $color-blue;
     }
+
+    @include hover(color, $color-blue-hover);
   }
 
   &__position {
