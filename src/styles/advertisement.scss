@@ -1,0 +1,486 @@
+.advertisement {
+  position: fixed;
+  width: 100%;
+  height: 90px;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 2;
+  background-color: #283693;
+  transition: 1s;
+
+  cursor: pointer;
+
+  @media (min-width: 1024px) {
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 1024px;
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    z-index: 4;
+
+    line-height: 20px;
+    color: #fff;
+    background-color: #dd4136;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    @include hover(background-color, #bb3228);
+  }
+
+  &__background-content {
+    display: flex;
+    z-index: 3;
+  }
+
+  &__waves {
+    position: absolute;
+    top: 53px;
+    left: 187px;
+    width: 110px;
+    height: 36px;
+    background-image: url(../images/banner-pictures/waves.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (max-width: 970px) {
+      left: 117px;
+    }
+
+    @media (max-width: 760px) {
+      left: 42px;
+      width: 88px;
+      height: 29px;
+    }
+  }
+
+  &__cross {
+    position: absolute;
+    top: 3px;
+    left: 334px;
+    width: 29px;
+    height: 29px;
+    background-image: url(../images/banner-pictures/x.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (max-width: 960px) {
+      left: 250px;
+    }
+
+    @media (max-width: 760px) {
+      left: 120px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__ellipse {
+    position: absolute;
+    bottom: 2px;
+    left: 695px;
+    width: 27px;
+    height: 27px;
+    background-image: url(../images/banner-pictures/ellipse.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (max-width: 970px) {
+      left: 540px;
+    }
+
+    @media (max-width: 650px) {
+      left: 450px;
+    }
+
+    @media (max-width: 560px) {
+      left: 370px;
+    }
+
+    @media (max-width: 480px) {
+      left: 261px;
+      width: 22px;
+      height: 23px;
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    top: 28px;
+    right: 2px;
+    width: 46px;
+    height: 44px;
+    background-image: url(../images/banner-pictures/dots.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (max-width: 970px) {
+      right: -15px;
+    }
+
+    @media (max-width: 760px) {
+      top: -18px;
+      right: -19px;
+      width: 37px;
+      height: 35px;
+    }
+  }
+
+  &__shoe {
+    position: absolute;
+    transform: translateY(150px);
+    left: 109px;
+    width: 159px;
+    height: 112px;
+    background-image: url(../images/banner-pictures/shoe.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    animation: 4s ease-in-out infinite running shoe;
+
+    @keyframes shoe {
+
+      0% {
+        transform: translateY(150px);
+      }
+
+      10% {
+        transform: translateY(-10px);
+      }
+
+      40% {
+        transform: translateY(-10px);
+      }
+
+      50% {
+        transform: translateY(-150px);
+      }
+
+      100% {
+        transform: translateY(-150px);
+      }
+    }
+
+    @media (max-width: 970px) {
+      left: 42px;
+    }
+
+    @media (max-width: 760px) {
+      left: 6px;
+      width: 115px;
+      height: 81px;
+
+      @keyframes shoe {
+
+        0% {
+          transform: translateY(150px);
+        }
+
+        10% {
+          transform: translateY(5px);
+        }
+
+        40% {
+          transform: translateY(5px);
+        }
+
+        50% {
+          transform: translateY(-150px);
+        }
+
+        100% {
+          transform: translateY(-150px);
+        }
+      }
+    }
+  }
+
+  &__women {
+    position: absolute;
+    transform: translateY(150px);
+    left: 109px;
+    width: 159px;
+    height: 150px;
+    background-image: url(../images/banner-pictures/women.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    animation: 4s ease-in-out infinite running women;
+
+    @keyframes women {
+
+      0% {
+        transform: translateY(150px);
+      }
+
+      50% {
+        transform: translateY(150px);
+      }
+
+      60% {
+        transform: translateY(-20px);
+      }
+
+      90% {
+        transform: translateY(-20px);
+      }
+
+      100% {
+        transform: translateY(-150px);
+      }
+    }
+
+    @media (max-width: 970px) {
+      left: 42px;
+    }
+
+    @media (max-width: 760px) {
+      left: 6px;
+      width: 117px;
+      height: 112px;
+
+      @keyframes women {
+
+        0% {
+          transform: translateY(150px);
+        }
+
+        50% {
+          transform: translateY(150px);
+        }
+
+        60% {
+          transform: translateY(-5px);
+        }
+
+        90% {
+          transform: translateY(-5px);
+        }
+
+        100% {
+          transform: translateY(-150px);
+        }
+      }
+    }
+  }
+
+  &__best-seller {
+    position: absolute;
+    display: flex;
+    left: 395px;
+    transform: translateY(-150px);
+    flex-direction: column;
+    align-items: center;
+
+    animation: 4s ease-in-out infinite running best-seller;
+
+    @keyframes best-seller {
+
+      0% {
+        transform: translateY(-150px);
+      }
+
+      10% {
+        transform: translateY(0);
+      }
+
+      40% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(150px);
+      }
+
+      100% {
+        transform: translateY(150px);
+      }
+    }
+
+    @media (max-width: 970px) {
+      left: 300px;
+    }
+
+    @media (max-width: 650px) {
+      left: 126px;
+
+      @keyframes best-seller {
+
+        0% {
+          transform: translateY(-150px);
+        }
+
+        10% {
+          transform: translateY(23px);
+        }
+
+        40% {
+          transform: translateY(23px);
+        }
+
+        50% {
+          transform: translateY(150px);
+        }
+
+        100% {
+          transform: translateY(150px);
+        }
+      }
+    }
+  }
+
+  &__sale {
+    position: absolute;
+    display: flex;
+    left: 395px;
+    transform: translateY(-150px);
+    flex-direction: column;
+    align-items: center;
+
+    animation: 4s ease-in-out infinite running sale;
+
+    @keyframes sale {
+
+      0% {
+        transform: translateY(-150px);
+      }
+
+      50% {
+        transform: translateY(-150px);
+      }
+
+      60% {
+        transform: translateY(0);
+      }
+
+      90% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(150px);
+      }
+    }
+
+    @media (max-width: 970px) {
+      left: 300px;
+    }
+
+    @media (max-width: 650px) {
+      left: 126px;
+
+      @keyframes sale {
+
+        0% {
+          transform: translateY(-150px);
+        }
+
+        50% {
+          transform: translateY(-150px);
+        }
+
+        60% {
+          transform: translateY(23px);
+        }
+
+        90% {
+          transform: translateY(23px);
+        }
+
+        100% {
+          transform: translateY(150px);
+        }
+      }
+    }
+  }
+
+  &__top-text {
+    text-transform: capitalize;
+    font-size: 48px;
+    font-weight: 700;
+    font-style: italic;
+    color: #ffc400;
+
+    @media (max-width: 650px) {
+      font-size: 30px;
+    }
+  }
+
+  &__bottom-text {
+    text-transform: uppercase;
+    font-size: 21px;
+    font-weight: 700;
+    color: $color-white;
+
+    @media (max-width: 650px) {
+      font-size: 13px;
+    }
+  }
+
+  &__buy {
+    position: absolute;
+    top: 29px;
+    right: 88px;
+    width: 158px;
+    height: 37px;
+
+    background-image: url(../images/banner-pictures/button-big.png);
+    background-size: contain;
+
+    animation: 4s ease-in-out infinite running buy;
+
+    @media (max-width: 970px) {
+      right: 43px;
+    }
+
+    @media (max-width: 760px) {
+      top: 29px;
+      right: 10px;
+      width: 67px;
+      height: 41px;
+
+      background-image: url(../images/banner-pictures/button-small.png);
+    }
+
+    @keyframes buy {
+
+      0% {
+        transform: scale(1);
+      }
+
+      75% {
+        transform: scale(1);
+      }
+
+      79% {
+        transform: scale(1.15);
+      }
+
+      83% {
+        transform: scale(1);
+      }
+
+      87% {
+        transform: scale(1.15);
+      }
+
+      90% {
+        transform: scale(1);
+      }
+
+      94% {
+        transform: scale(1.15);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+}
